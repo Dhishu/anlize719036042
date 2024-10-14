@@ -1,0 +1,354 @@
+/* Global Styles */
+html{
+    overflow: hidden;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url(../font/arial.ttf);
+}
+
+/* Header */
+.head {
+    width: calc(100% - 5px);
+    height: 50px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4CAF50;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.head img:nth-child(1) {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
+
+.head img:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* User info */
+.na1 {
+    display: flex;
+}
+
+.na {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    color: white;
+}
+
+.na span:nth-child(1) {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.na span:nth-child(2) {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Chatbox */
+.chatbox {
+    width: 100%;
+    height: calc(100% - 60px);
+    background-color: #E0E7FF;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.chat {
+    height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Input Box */
+.inputbox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: calc(100% - 10px);
+    padding: 5px;
+    bottom: 0;
+    background-color: transparent;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inputbox textarea {
+    border: 1px solid #ccc;
+    width: calc(100% - 140px);
+    height: 40px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #8e8e8e;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.inputbox textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+}
+
+.inputbox div {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.inputbox div svg{
+    width: 100%;
+    height: 100%;
+}
+
+/* Options Panel */
+.o1 {
+    width: 100%;
+    height: 0;
+    display: flex;
+    align-items: flex-end;
+    display: none;
+}
+
+.o2 {
+    width: calc(100% - 70px);
+    height: 50vh;
+    margin-left: 10px;
+    border-radius: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg,#000000, #251919);
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: #ffffff;
+    font-size: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add hover effect for box elevation */
+.o2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Fieldset styling */
+.o2 fieldset {
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Textarea styling */
+.o2 fieldset textarea {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    resize: vertical;
+    color: #ffffff;
+    font-size: 19px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Input field styling */
+.o2 fieldset input {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 30px;
+    background-color: transparent;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Button styling */
+.o2 button {
+    padding: 12px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #087f5b;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.o2 button:hover {
+    background-color: #066a47;
+    transform: scale(1.05);
+}
+
+
+.o2 fieldset {
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.1);
+}
+
+.o2 fieldset textarea {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    resize: vertical;
+    color: #ffffff;
+}
+
+.o2 fieldset input {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 30px;
+    background-color: transparent;
+    font-size: medium;
+    color: #ffffff;
+}
+
+/* Buttons */
+.o2 button {
+    padding: 10px;
+    color: #000000;
+    border-radius: 5px;
+    background-color: #08A57B;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.o2 button:hover {
+    background-color: #066F5C;
+}
+
+.o2 fieldset legend button:nth-child(1) {
+    color: #ffffff;
+    background-color: #4caf4f59;
+}
+
+.o2 fieldset legend button:nth-child(2) {
+    color: #fff;
+    background-color: #D32F2F;
+}
+
+/* Modal Popup */
+.top {
+    width: 100%;
+    height: 0;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    top: 50vh;
+    display: none;
+}
+
+.top div {
+    width: calc(50vw - 40px);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.top div button {
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    margin: 5px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.top div button:hover {
+    background-color: #333;
+}
+
+/* chat msg*/
+.chat{
+    overflow-x: scroll;
+}
+.left,.right{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+.left{
+    align-items: flex-start;
+}
+.right{
+    align-items: flex-end;
+}
+.c1{
+    min-height: 100%;
+}
+.cb{
+    padding: 10px;
+    max-width: 70%;
+    border-radius: 10px;
+    display: grid;
+    background:  #4CAF50;
+}
+.cb div{
+    width: 50vw;
+    height: 100px;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cb span{
+    margin: 5px 0;
+}
+.cb button{
+    padding: 5px;
+    background-color: transparent;
+    border: solid 2px rgba(0, 0, 0, 0.195);
+    border-radius: 5px;
+    width: 50vw;
+}
+.cb img{
+    width: 20px;
+}
+.cb label{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
