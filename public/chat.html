@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat</title>
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+    <div class="head">
+        <div class="na1">
+            <img onclick="window.history.back();" src="icon/back.png">
+            <img src="icon/dp.png">
+            <div class="na">
+                <span id="name">nethu</span>
+                <span>last seen today at 10:08</span>
+            </div>
+        </div>
+        <div>
+            <img src="icon/menu.png">
+        </div>
+    </div>
+    <div class="chatbox">
+        <div onclick="if(d.op==1){op();};if(d.bu==1){addbu();}" class="chat">
+            <div id="chat" class="c1">
+                <!--<div class="left">
+                    <div class="cb">
+                        <div></div>
+                        <span>Thilina kavishan</span>
+                        <span>hi i am a thilina</span>
+                        <button>submith</button>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="cb">
+                        <div style="background-image: url(i.png)"></div>
+                        <span>Thilina kavishan</span>
+                        <span style="opacity: 0.7;">hi i am a thilina</span>
+                        <br><button>submith</button>
+                        <label><img src="icon/w2.png"></label>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="cb">
+                        <span>Thilina kavishan</span>
+                        <button>submith</button>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        <div class="o1" id="o1">
+            <div class="o2">
+                <fieldset>
+                    <legend><button>img</button></legend>
+                    <input id="imgin" placeholder="type img url" type="text">
+                </fieldset>
+                <fieldset>
+                    <legend><button>massage</button></legend>
+                    <textarea placeholder="type massage..." id="msgin"></textarea>
+                </fieldset>
+                <fieldset>
+                    <legend><button>Folter</button></legend>
+                    <textarea placeholder="type Folter..." id="foin"></textarea>
+                </fieldset><br>
+                <div id="bulist">
+                    
+                </div>
+                
+                <br>
+                <center><button onclick="addbu()">add button</button></center>
+            </div>
+        </div>
+        <div class="inputbox">
+            
+            <textarea placeholder="Type massage" name="" id="in"></textarea>
+            <div onclick="op()" style="background-image: url(icon/op.png);"></div>
+            <div onclick="send()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+              </div>
+        </div>
+    </div>
+    <div id="bu" class="top">
+        <div>
+            <button onclick="bua('r')">Reply button</button>
+            <button onclick="bua('u')">Url button</button>
+            <button onclick="bua('c')">Copy button</button>
+            <button onclick="bua('s')">Select button</button>
+        </div>
+    </div>
+    <script src="chat.js"></script>
+</body>
+</html>
